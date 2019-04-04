@@ -11,11 +11,7 @@ class Rectangle:
         self.left = None
         self.right = None
         self.down = None
-    def __str__(self):
-        string = ""
-        for el in self.corners:
-            string += str(el) + '\n'
-        return string
+
     # this method turns the rectangle by the specific angle so that its vertices are aligned with the axes
     def straighten_around_point(self, point):
 
