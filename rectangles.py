@@ -66,7 +66,3 @@ if __name__ == "__main__":
     rect_c = Rectangle((-1, 0), (0, 1), (1, 0), (0, -1))
     rect_d = Rectangle((0.9, 0.9), (2, 0.9), (0.9, 3), (2, 3))
     print(rects_intersect(rect_c, rect_d))
-
-    rect_e = Rectangle((-8.937, 6.718), (10.737, 3.118), (8.937, -6.718), (-10.737, -3.118))
-    rect_f = Rectangle((60, 5), (12, 5), (60, 10), (12, 10))
-    print(rects_intersect(rect_e, rect_f))
