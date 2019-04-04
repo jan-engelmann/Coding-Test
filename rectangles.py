@@ -16,8 +16,9 @@ class Rectangle:
     def straighten_around_point(self, point):
 
         y_coord = [c[1] for c in self.corners]
-
         y_indices = [i[0] for i in sorted(enumerate(y_coord), key=lambda x: x[1])]
+
+        # use the upper two points to determine the angle towards the axes
         high = self.corners[y_indices[-1]]
         low = self.corners[y_indices[-2]]
 
