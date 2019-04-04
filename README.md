@@ -14,6 +14,6 @@ Find webapp under http://127.0.0.1:8000/currency_conv/calculator
 most relevant files are:
 * currency_conv/views.py
 * currency_conv/forms.py
-* currency_conv/forms.py
+
 
 
