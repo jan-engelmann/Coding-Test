@@ -1,6 +1,7 @@
 # Coding-Test
 ## Rectangles
 The code can deal with rectangles of all orientations and takes the four corners of the rectangles as inputs.
+The final part using Matplotlib is only for visualization purposes.
 ## Dices
 Straight forward implementation with the Python Random module.
 ## Currency Calculator
