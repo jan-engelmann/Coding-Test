@@ -15,6 +15,7 @@ if __name__ == "__main__":
               11: 1,
               12: 1.5,
               }
+    # assuming bet is always 0.5
     money = 0.5
     for i in range(1000):
         value = random.randrange(1, 7, 1) + random.randrange(1, 7, 1)
