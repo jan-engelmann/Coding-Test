@@ -39,15 +39,17 @@ class Rectangle:
     def point_in_rect(self, point):
         return point[0] < self.right and point[0] > self.left and point[1] < self.up and point[1] > self.down
 
-    # this is the mathematical formula for rotation of one point around a specified origin with an angle
+
+# this is the mathematical formula for rotation of one point around a specified origin with an angle
 def rotate_point(point, origin, angle):
         x = math.cos(angle) * (point[0] - origin[0]) - math.sin(angle) * (point[1] - origin[1]) + origin[0]
         y = math.sin(angle) * (point[0] - origin[0]) + math.cos(angle) * (point[1] - origin[1]) + origin[1]
         return x, y
 
 # the algorithm checks for each corner of rect_b if it is inside rect_a
-# 1. turn rect_a around point so that its vertices are parallel to the axes
-# 2. check if point is inside the rectangle
+# 1. turn rect_a around origin so that its vertices are parallel to the axes
+# 2. turn point as well around origin for the same angle
+# 3. check if point is inside the rectangle
 def rects_intersect(rect_a, rect_b):
     for point in rect_b.corners:
         tmp_rect = copy.deepcopy(rect_a)
