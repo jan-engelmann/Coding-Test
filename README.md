@@ -2,9 +2,9 @@
 ## Rectangles
 The code can deal with rectangles of all orientations and takes the four corners of the rectangles as inputs.
 ## Dices
-Straight forward implementation with the python random module.
+Straight forward implementation with the Python Random module.
 ## Currency Calculator
-Start the development server with django and requests installed:
+Start the development server with Django and Requests installed:
 ```
 cd mysite
 python manage.py runserver
