@@ -3,12 +3,12 @@ from django import forms
 class AmountForm(forms.Form):
     EURO = 'EUR'
     USDOLLAR = 'USD'
-    YEN = 'YPY'
+    YEN = 'JPY'
     CURRENCY_CHOICES = (
         (EURO, 'Euro'),
         (USDOLLAR, 'US-Dollar'),
         (YEN, 'Japanese-Yen'),
     )
-    amount = forms.FloatField()
-    from_curr = forms.ChoiceField(choices=CURRENCY_CHOICES)
-    to_curr = forms.ChoiceField(choices=CURRENCY_CHOICES)
+    START_CURRENCY = forms.ChoiceField(choices=CURRENCY_CHOICES)
+    END_CURRENCY = forms.ChoiceField(choices=CURRENCY_CHOICES)
+    AMOUNT = forms.FloatField()

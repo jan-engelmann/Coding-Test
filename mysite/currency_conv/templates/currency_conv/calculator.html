@@ -1,0 +1,11 @@
+<h1>{{ "Currency Converter" }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% if result %}
+<h3>Converted Amount: {{ result }}</h3>
+{% endif %}

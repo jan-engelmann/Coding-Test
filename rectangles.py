@@ -39,7 +39,6 @@ class Rectangle:
     def point_in_rect(self, point):
         return point[0] < self.right and point[0] > self.left and point[1] < self.up and point[1] > self.down
 
-
     # this is the mathematical formula for rotation of one point around a specified origin with an angle
 def rotate_point(point, origin, angle):
         x = math.cos(angle) * (point[0] - origin[0]) - math.sin(angle) * (point[1] - origin[1]) + origin[0]
@@ -63,6 +62,24 @@ if __name__ == "__main__":
     rect_b = Rectangle((1, 2), (1, 4), (5, 4), (5, 2))
     print(rects_intersect(rect_a, rect_b))
 
-    rect_c = Rectangle((-1, 0), (0, 1), (1, 0), (0, -1))
-    rect_d = Rectangle((0.9, 0.9), (2, 0.9), (0.9, 3), (2, 3))
+    coord_c = (-1, 0), (0, 1), (1, 0), (0, -1)
+    coord_d = (0.6, 0.6), (1, 1), (1.4, 0.6), (1, 0.2)
+    rect_c = Rectangle(*coord_c)
+    rect_d = Rectangle(*coord_d)
     print(rects_intersect(rect_c, rect_d))
+
+    # visualization of the rectangles
+    import matplotlib.pyplot as plt
+    x = [el[0] for el in coord_d]
+    y = [el[1] for el in coord_d]
+
+    xb = [el[0] for el in coord_c]
+    yb = [el[1] for el in coord_c]
+
+    plt.figure()
+    plt.scatter(x, y)
+    plt.scatter(xb, yb)
+    plt.fill(x, y)
+    plt.fill(xb, yb)
+    plt.axis('equal')
+    plt.show()
